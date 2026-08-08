@@ -1,16 +1,50 @@
-# React + Vite
+# Portfolio + Blog Platform — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The React frontend for my personal portfolio and blog platform. Built with React (via Vite), this connects to a custom Node.js/Express/MongoDB backend to display projects, blog posts, and handle user authentication.
 
-Currently, two official plugins are available:
+## Features (In Progress)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Personal portfolio (About, Skills)
+- Dynamic Projects showcase (fetched from backend)
+- Blog with comments (fetched from backend)
+- User registration/login
+- Admin dashboard for managing content
+- Contact form
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Library:** React
+- **Build Tool:** Vite
+- **Routing:** React Router (planned)
+- **API Communication:** Fetch API
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+portfolio-blog-frontend/
+  ├── src/
+  │     ├── components/     # Reusable UI pieces (Header, Footer, etc.)
+  │     ├── pages/           # Full page components (planned)
+  │     ├── App.jsx           # Root component
+  │     ├── main.jsx          # Entry point
+  ├── index.html
+```
+
+## Setup
+
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open `http://localhost:5173`
+
+## Related Repository
+
+Backend API: [portfolio-blog-backend](https://github.com/your-username/portfolio-blog-backend)
+
+## Author
+
+Ali — Full-stack developer in training, building this as a portfolio project.
+
+## Status
+
+🚧 Work in progress — currently building out core components and pages.
