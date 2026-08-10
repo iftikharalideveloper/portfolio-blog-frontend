@@ -208,8 +208,15 @@ is Phase ke andar, isi project ke real code ke sath, sikhaye jayenge. Deep teach
     - [x] useEffect hook (data fetch karne ke liye) — ✅ (ProjectsPage — real backend data fetch hua)
     - [x] async/await pattern useEffect ke andar — ✅
     - [x] Lists aur .map() — ✅ (projects dikhane ke liye)
-    - [ ] Loading/Error states (conditional rendering) — 🔄 NEXT
-    - [ ] React Router (multiple pages banane ke liye)
+    - [x] Loading/Error states (conditional rendering) — ✅
+    - [x] React Router (BrowserRouter, Routes, Route, Link) — ✅ Home/Projects/Blog pages navigate karte hain
+
+25. Pages banao — 🔄 IN PROGRESS:
+    - [x] HomePage, ProjectsPage (real data), BlogPage (basic)
+    - [ ] Register/Login pages (forms + backend connect) — 🔄 NEXT
+    - [ ] Single Post page (with comments)
+    - [ ] Admin Dashboard
+    - [ ] Contact page
 25. Pages banao: Home/About, Projects, Blog List, Single Post (with comments), Login, Register, Admin Dashboard
 26. Backend se connect karo (fetch/axios), token ko localStorage mein save karo
 27. Styling (Tailwind ya CSS)
