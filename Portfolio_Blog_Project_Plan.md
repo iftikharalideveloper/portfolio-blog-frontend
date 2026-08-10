@@ -213,7 +213,9 @@ is Phase ke andar, isi project ke real code ke sath, sikhaye jayenge. Deep teach
 
 25. Pages banao — 🔄 IN PROGRESS:
     - [x] HomePage, ProjectsPage (real data), BlogPage (basic)
-    - [ ] Register/Login pages (forms + backend connect) — 🔄 NEXT
+    - [ ] Register/Login pages (forms + backend connect) — 🔄 IN PROGRESS
+      - [x] RegisterPage — done, tested, user created in DB
+      - [ ] LoginPage (+ localStorage token save) — NEXT
     - [ ] Single Post page (with comments)
     - [ ] Admin Dashboard
     - [ ] Contact page

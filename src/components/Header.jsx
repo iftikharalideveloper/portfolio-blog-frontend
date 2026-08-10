@@ -15,6 +15,7 @@ function Header() {
           <Link to="/projects">Projects</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/register">Register</Link>
         </nav>
       )}
     </header>
