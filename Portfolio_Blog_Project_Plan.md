@@ -211,11 +211,10 @@ is Phase ke andar, isi project ke real code ke sath, sikhaye jayenge. Deep teach
     - [x] Loading/Error states (conditional rendering) — ✅
     - [x] React Router (BrowserRouter, Routes, Route, Link) — ✅ Home/Projects/Blog pages navigate karte hain
 
-25. Pages banao — 🔄 IN PROGRESS:
-    - [x] HomePage, ProjectsPage (real data), BlogPage (basic)
-    - [ ] Register/Login pages (forms + backend connect) — 🔄 IN PROGRESS
-      - [x] RegisterPage — done, tested, user created in DB
-      - [ ] LoginPage (+ localStorage token save) — NEXT
+    - [x] Header login-aware (isLoggedIn check, logout, ternary, fragments) — ✅ DONE
+    - [ ] Admin Dashboard (create posts with token) — 🔄 NEXT
+    - [ ] Single Post page (with comments)
+    - [ ] Contact page
     - [ ] Single Post page (with comments)
     - [ ] Admin Dashboard
     - [ ] Contact page
