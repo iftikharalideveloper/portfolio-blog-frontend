@@ -33,7 +33,10 @@ function Header() {
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
           { isLoggedIn ? (
+            <>
+            <Link to="/admin">Dashboard</Link>
             <button onClick={handleLogout}>Logout</button>
+            </>
           ) : (
             <>
           <Link to="/register">Register</Link>

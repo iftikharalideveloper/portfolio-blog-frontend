@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import AdminDashboard from "./pages/AdminDashboard";
+import SinglePostPage from "./pages/SinglePostPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/blog/:id" element={<SinglePostPage />} />
       </Routes>
       <Footer />
     </div>
