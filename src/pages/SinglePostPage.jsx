@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function SinglePostPage() {
@@ -15,34 +15,33 @@ function SinglePostPage() {
           `http://localhost:8000/api/posts/${id}`,
         );
         const postData = await postResponse.json();
-        setPost(postData.posts);
-        console.log(postData);
+        setPost(postData.post);
 
-        const commentResponse = await fetch(
+        const commentsResponse = await fetch(
           `http://localhost:8000/api/comments/${id}`,
         );
-        const commentData = await commentResponse.json();
-        setComments(commentData.comments);
-        console.log(commentData);
+        const commentsData = await commentsResponse.json();
+        setComments(commentsData.comments);
       } catch (error) {
         console.log(error);
       } finally {
         setIsLoading(false);
       }
     };
+
     fetchPostAndComments();
   }, [id]);
 
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      alert("Please login to comment");
+      return;
+    }
 
     try {
-      const token = localStorage.getItem("token");
-      if (!token) {
-        alert("Please login to comment");
-        return;
-      }
-
       const response = await fetch(`http://localhost:8000/api/comments/${id}`, {
         method: "POST",
         headers: {
@@ -51,7 +50,9 @@ function SinglePostPage() {
         },
         body: JSON.stringify({ content: newComment }),
       });
+
       const data = await response.json();
+
       if (data.success) {
         setComments([...comments, data.newComment]);
         setNewComment("");
@@ -60,15 +61,16 @@ function SinglePostPage() {
       console.log(error);
     }
   };
-  if (isLoading) return <p>Loading......</p>;
-  if (!post) return <p>post not found</p>;
+
+  if (isLoading) return <p>Loading...</p>;
+  if (!post) return <p>Post not found</p>;
 
   return (
     <div>
       <h2>{post.title}</h2>
       <p>{post.content}</p>
 
-      <h3>comments</h3>
+      <h3>Comments</h3>
       {comments.map((comment) => (
         <div key={comment._id}>
           <p>{comment.content}</p>
@@ -78,7 +80,7 @@ function SinglePostPage() {
       <form onSubmit={handleCommentSubmit}>
         <input
           type="text"
-          placeholder="New Comments...."
+          placeholder="Write a comment..."
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
         />

@@ -1,24 +1,27 @@
 import React, { use, useEffect } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Header() {
   //Mobile Menu Toggle (Header Mein)
   const [isMenuOpen, setisMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const {isLoggedIn, logout} = useAuth();
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    const token = localStorage.getItem("token");
-    if (token){
-      return setIsLoggedIn(true);
-    }
-  },[]);
+  // useEffect(()=>{
+  //   const token = localStorage.getItem("token");
+  //   if (token){
+  //     return setIsLoggedIn(true);
+  //   }
+  // },[]);
 
   const handleLogout = () =>{
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    setIsLoggedIn(false);
+    // localStorage.removeItem("token");
+    // localStorage.removeItem("user");
+    // setIsLoggedIn(false);
+    logout();
     navigate("/login");
   }
 
