@@ -5,18 +5,18 @@ function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30">
       
       {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32 overflow-hidden">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 overflow-hidden">
         
         {/* Background Decorative Elements */}
-        <div className="absolute top-20 -left-20 w-72 h-72 bg-indigo-300/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-200/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 -left-20 w-48 h-48 bg-indigo-300/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-10 -right-20 w-56 h-56 bg-purple-300/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-200/10 rounded-full blur-3xl"></div>
         
         {/* Main Content */}
         <div className="relative text-center max-w-4xl mx-auto">
           
-          {/* Badge - Updated with Multiple Backend Options */}
-          <div className="inline-flex flex-wrap items-center gap-3 justify-center px-4 py-2 bg-indigo-500/10 border border-indigo-200/50 rounded-full mb-8 animate-fade-in">
+          {/* Badge */}
+          <div className="inline-flex flex-wrap items-center gap-2 justify-center px-4 py-2 bg-indigo-500/10 border border-indigo-200/50 rounded-full mb-4 animate-fade-in">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
@@ -29,22 +29,22 @@ function HomePage() {
           </div>
 
           {/* Greeting */}
-          <p className="text-indigo-600 font-semibold text-lg mb-3 animate-slide-up">
+          <p className="text-indigo-600 font-semibold text-base mb-2 animate-slide-up">
             👋 Hi, I'm
           </p>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 mb-6 leading-[1.1] animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          {/* Main Heading - BARA */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-3 leading-[1.1] animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Iftikhar Ali
-            <span className="block mt-2">
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block mt-1">
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl">
                 Full-Stack Developer
               </span>
             </span>
           </h1>
 
-          {/* Description - Updated with Laravel + PostgreSQL */}
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          {/* Description - BARA */}
+          <p className="text-base md:text-lg text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
             I build full-stack web applications with{' '}
             <span className="text-indigo-600 font-semibold">React</span>,{' '}
             <span className="text-indigo-600 font-semibold">Node.js</span>,{' '}
@@ -54,11 +54,11 @@ function HomePage() {
             Welcome to my portfolio and blog, where I share what I'm learning along the way.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - BARA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <Link
               to="/projects"
-              className="group relative overflow-hidden px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105"
+              className="group relative overflow-hidden px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 text-base"
             >
               <span className="relative z-10 flex items-center gap-2">
                 🚀 View My Projects
@@ -71,7 +71,7 @@ function HomePage() {
             
             <Link
               to="/contact"
-              className="group px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-indigo-400 text-slate-700 font-semibold rounded-2xl shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 hover:scale-105 hover:bg-white"
+              className="group px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-indigo-400 text-slate-700 font-semibold rounded-xl shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 hover:scale-105 hover:bg-white text-base"
             >
               <span className="flex items-center gap-2">
                 💬 Get in Touch
@@ -82,8 +82,8 @@ function HomePage() {
             </Link>
           </div>
 
-          {/* Stats Section - Updated */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          {/* Stats Section - BARA */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             {[
               { number: '3+', label: 'Years Experience', icon: '💼' },
               { number: '15+', label: 'Projects Completed', icon: '🎯' },
@@ -92,18 +92,17 @@ function HomePage() {
             ].map((stat, index) => (
               <div 
                 key={index}
-                className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-200"
+                className="group bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-200"
               >
-                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-3xl mb-1">{stat.icon}</div>
                 <div className="text-2xl font-extrabold text-slate-900">{stat.number}</div>
                 <div className="text-sm text-slate-500 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          {/* Tech Stack Tags - Updated with Laravel + PostgreSQL */}
-          <div className="flex flex-wrap gap-3 justify-center mt-12 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            {/* Frontend */}
+          {/* Tech Stack Tags - BARA */}
+          <div className="flex flex-wrap gap-2.5 justify-center mt-10 animate-slide-up" style={{ animationDelay: '0.5s' }}>
             <span className="px-4 py-2 bg-white/70 backdrop-blur-sm border border-slate-200/80 rounded-full text-sm font-medium text-slate-700 hover:border-indigo-400 hover:bg-indigo-50/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               ⚛️ React
             </span>
@@ -113,32 +112,24 @@ function HomePage() {
             <span className="px-4 py-2 bg-white/70 backdrop-blur-sm border border-slate-200/80 rounded-full text-sm font-medium text-slate-700 hover:border-indigo-400 hover:bg-indigo-50/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               📱 React Native
             </span>
-            
-            {/* Backend - Node.js */}
             <span className="px-4 py-2 bg-green-50/80 backdrop-blur-sm border border-green-200/80 rounded-full text-sm font-medium text-green-700 hover:border-green-400 hover:bg-green-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🟢 Node.js
             </span>
             <span className="px-4 py-2 bg-green-50/80 backdrop-blur-sm border border-green-200/80 rounded-full text-sm font-medium text-green-700 hover:border-green-400 hover:bg-green-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🚀 Express
             </span>
-            
-            {/* Backend - Laravel (NEW) */}
             <span className="px-4 py-2 bg-red-50/80 backdrop-blur-sm border border-red-200/80 rounded-full text-sm font-medium text-red-700 hover:border-red-400 hover:bg-red-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🔥 Laravel
             </span>
             <span className="px-4 py-2 bg-red-50/80 backdrop-blur-sm border border-red-200/80 rounded-full text-sm font-medium text-red-700 hover:border-red-400 hover:bg-red-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🐘 PHP
             </span>
-            
-            {/* Databases */}
             <span className="px-4 py-2 bg-emerald-50/80 backdrop-blur-sm border border-emerald-200/80 rounded-full text-sm font-medium text-emerald-700 hover:border-emerald-400 hover:bg-emerald-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🍃 MongoDB
             </span>
             <span className="px-4 py-2 bg-blue-50/80 backdrop-blur-sm border border-blue-200/80 rounded-full text-sm font-medium text-blue-700 hover:border-blue-400 hover:bg-blue-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🐘 PostgreSQL
             </span>
-            
-            {/* Other */}
             <span className="px-4 py-2 bg-purple-50/80 backdrop-blur-sm border border-purple-200/80 rounded-full text-sm font-medium text-purple-700 hover:border-purple-400 hover:bg-purple-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               📊 GraphQL
             </span>
@@ -147,8 +138,8 @@ function HomePage() {
             </span>
           </div>
 
-          {/* Tech Stack Categories - NEW Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          {/* Tech Stack Categories - BARA */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 animate-slide-up" style={{ animationDelay: '0.6s' }}>
             {[
               {
                 title: '🎯 Frontend',
@@ -170,13 +161,13 @@ function HomePage() {
                 key={index}
                 className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-200"
               >
-                <div className={`text-3xl mb-3`}>{category.title.split(' ')[0]}</div>
+                <div className={`text-3xl mb-2`}>{category.title.split(' ')[0]}</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{category.title.split(' ').slice(1).join(' ')}</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {category.techs.map((tech) => (
                     <span 
                       key={tech}
-                      className={`px-3 py-1 bg-gradient-to-r ${category.color} text-white text-xs font-medium rounded-full`}
+                      className={`px-3 py-1.5 bg-gradient-to-r ${category.color} text-white text-sm font-medium rounded-full`}
                     >
                       {tech}
                     </span>
@@ -187,17 +178,17 @@ function HomePage() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 animate-bounce-slow hidden md:block">
-            <div className="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center">
-              <div className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2 animate-pulse"></div>
+          <div className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 animate-bounce-slow hidden md:block">
+            <div className="w-5 h-8 border-2 border-slate-300 rounded-full flex justify-center">
+              <div className="w-1.5 h-2.5 bg-indigo-500 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Recent Work / Featured Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="text-center mb-12">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="text-center mb-10">
           <p className="text-indigo-600 font-semibold text-sm uppercase tracking-wider mb-2">Featured Work</p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Some Projects I've <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Built</span>
@@ -267,16 +258,16 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Tech Stack Comparison - NEW Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="text-center mb-12">
+      {/* Tech Stack Comparison */}
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="text-center mb-10">
           <p className="text-indigo-600 font-semibold text-sm uppercase tracking-wider mb-2">Tech Stack</p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Which Stack Do I <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Use?</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* MERN Stack */}
           <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:border-indigo-200">
             <div className="flex items-center gap-3 mb-4">
