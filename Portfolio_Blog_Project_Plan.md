@@ -277,6 +277,7 @@ Admin Dashboard, Contact — sab backend se connected, Context API se auth state
 17. Backend deploy karo (Render)
 18. Frontend deploy karo (Vercel)
 19. Final testing (live pe)
+20. completed
 
 ---
 
