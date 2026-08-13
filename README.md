@@ -48,3 +48,25 @@ Ali — Full-stack developer in training, building this as a portfolio project.
 ## Status
 
 🚧 Work in progress — currently building out core components and pages.
+
+## Final Documents Here
+Portfolio Blog Deployment
+
+Frontend:
+https://portfolio-blog-frontend-mocha.vercel.app
+
+Backend:
+https://portfolio-blog-backend-seven.vercel.app
+
+Database:
+MongoDB Atlas
+
+Frontend:
+Vercel
+
+Backend:
+Vercel
+
+GitHub:
+portfolio-blog-frontend
+portfolio-blog-backend
