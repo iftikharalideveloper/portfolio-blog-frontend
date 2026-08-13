@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { API_URL } from "../config/api";
 
 function RegisterPage() {
@@ -28,31 +29,54 @@ function RegisterPage() {
       setMessage("Something went wrong! Please try again later", error.message);
     }
   };
+
   return (
-    <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Register</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-16">
+      <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-bold text-slate-900 mb-1">Create Account</h2>
+        <p className="text-slate-500 text-sm mb-6">Join to comment on posts and more.</p>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+          <button
+            type="submit"
+            className="bg-indigo-500 hover:bg-indigo-600 text-white py-2.5 rounded-lg font-medium transition"
+          >
+            Register
+          </button>
+        </form>
+
+        {message && (
+          <p className="text-sm text-slate-600 mt-4 text-center">{message}</p>
+        )}
+
+        <p className="text-sm text-slate-500 mt-6 text-center">
+          Already have an account?{" "}
+          <Link to="/login" className="text-indigo-500 hover:text-indigo-600 font-medium">
+            Login
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }

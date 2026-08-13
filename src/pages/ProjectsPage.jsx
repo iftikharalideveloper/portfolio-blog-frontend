@@ -17,8 +17,8 @@ function ProjectsPage() {
         setProjects(data.projects);
       } catch (error) {
         // console.log("Error fetching projects:", error);
-        setError("Project could't load. check the database please!",error)
-      } finally{
+        setError("Project could't load. check the database please!", error)
+      } finally {
         setIsLoading(false);
       }
     };
@@ -26,27 +26,38 @@ function ProjectsPage() {
     fetchProjects();
   }, []);
 
-//loading
-if (isLoading){
-  return <p>Please Wait, Project is Loading...</p>
-}
+  //loading
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-slate-500">Please Wait, Project is Loading...</p>
+      </div>
+    );
+  }
 
-//error
-if (error){
-  return <p>{error}</p>
-}
+  //error
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">{error}</p>
+      </div>
+    );
+  }
+
   return (
-    <div>
-      <h2>My Projects</h2>
-      {projects.map((project) => (
-        <ProjectCard
-          key={project._id}
-          title={project.title}
-          description={project.description}
-          githubLink={project.githubLink}
-          skills={project.techStack}
-        />
-      ))}
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      <h2 className="text-3xl font-bold text-slate-900 mb-8">My Projects</h2>
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project._id}
+            title={project.title}
+            description={project.description}
+            githubLink={project.githubLink}
+            skills={project.techStack}
+          />
+        ))}
+      </div>
     </div>
   );
 }
