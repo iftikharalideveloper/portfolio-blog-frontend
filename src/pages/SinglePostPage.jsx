@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { API_URL } from "../config/api";
 
 function SinglePostPage() {
   const { id } = useParams();
@@ -12,13 +13,13 @@ function SinglePostPage() {
     const fetchPostAndComments = async () => {
       try {
         const postResponse = await fetch(
-          `http://localhost:8000/api/posts/${id}`,
+          `${API_URL}/api/posts/${id}`,
         );
         const postData = await postResponse.json();
         setPost(postData.post);
 
         const commentsResponse = await fetch(
-          `http://localhost:8000/api/comments/${id}`,
+          `${API_URL}/api/comments/${id}`,
         );
         const commentsData = await commentsResponse.json();
         setComments(commentsData.comments);
@@ -42,7 +43,7 @@ function SinglePostPage() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/api/comments/${id}`, {
+      const response = await fetch(`${API_URL}/api/comments/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../config/api";
 
 function ContactPage() {
   const [name, setName] = useState("");
@@ -10,7 +11,7 @@ function ContactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/messages", {
+      const response = await fetch(`${API_URL}/api/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

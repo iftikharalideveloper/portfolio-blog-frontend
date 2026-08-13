@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
+import { API_URL } from "../config/api";
 
 function ProjectsPage() {
   //fetch projects state
@@ -11,7 +12,7 @@ function ProjectsPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/projects");
+        const response = await fetch(`${API_URL}/api/projects`);
         const data = await response.json();
         setProjects(data.projects);
       } catch (error) {

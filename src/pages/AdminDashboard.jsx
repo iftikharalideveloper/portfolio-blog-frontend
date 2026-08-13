@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_URL } from "../config/api";
 
 function AdminDashboard() {
   const [title, setTitle] = useState("");
@@ -10,7 +11,7 @@ function AdminDashboard() {
     e.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:8000/api/posts", {
+      const response = await fetch(`${API_URL}/api/posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

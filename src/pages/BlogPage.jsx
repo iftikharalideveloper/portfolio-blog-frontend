@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { API_URL } from '../config/api';
 
 function BlogPage() {
     
@@ -9,7 +10,7 @@ function BlogPage() {
     useEffect(()=>{
       const fetchPosts = async () =>{
         try {
-          const response = await fetch("http://localhost:8000/api/posts");
+          const response = await fetch(`${API_URL}/api/posts`);
           const data = await response.json();
           // console.log(data);
           setPosts(data.posts)
