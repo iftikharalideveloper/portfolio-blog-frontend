@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"; // ✅ Added useEffect
+import { Link, useNavigate } from "react-router-dom"; // ✅ Added useNavigate
 import { API_URL } from "../config/api";
 
 function RegisterPage() {
@@ -10,6 +10,8 @@ function RegisterPage() {
   const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
+  
+  const navigate = useNavigate(); // ✅ Added for navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,6 +48,12 @@ function RegisterPage() {
         setPassword("");
         setConfirmPassword("");
         setAcceptTerms(false);
+        
+        // ✅ NEW: Auto redirect to login after 5 seconds
+        setTimeout(() => {
+          navigate("/login");
+        }, 5000);
+        
       } else {
         setMessage("❌ " + (data.message || "Registration Failed. Try again! 😅"));
       }

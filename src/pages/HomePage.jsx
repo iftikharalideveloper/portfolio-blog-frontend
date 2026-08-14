@@ -49,6 +49,7 @@ function HomePage() {
             <span className="text-indigo-600 font-semibold">React</span>,{' '}
             <span className="text-indigo-600 font-semibold">Node.js</span>,{' '}
             <span className="text-indigo-600 font-semibold">Laravel</span>,{' '}
+            <span className="text-indigo-600 font-semibold">MySQL</span>,{' '}
             <span className="text-indigo-600 font-semibold">MongoDB</span>, and{' '}
             <span className="text-indigo-600 font-semibold">PostgreSQL</span>. 
             Welcome to my portfolio and blog, where I share what I'm learning along the way.
@@ -126,6 +127,9 @@ function HomePage() {
             </span>
             <span className="px-4 py-2 bg-emerald-50/80 backdrop-blur-sm border border-emerald-200/80 rounded-full text-sm font-medium text-emerald-700 hover:border-emerald-400 hover:bg-emerald-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🍃 MongoDB
+            </span>
+            <span className="px-4 py-2 bg-blue-50/80 backdrop-blur-sm border border-blue-200/80 rounded-full text-sm font-medium text-blue-700 hover:border-blue-400 hover:bg-blue-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
+              🐬 MySQL
             </span>
             <span className="px-4 py-2 bg-blue-50/80 backdrop-blur-sm border border-blue-200/80 rounded-full text-sm font-medium text-blue-700 hover:border-blue-400 hover:bg-blue-100/50 hover:shadow-md transition-all duration-300 hover:scale-105">
               🐘 PostgreSQL
@@ -313,7 +317,7 @@ function HomePage() {
           <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:border-red-200">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-4xl">🔥</span>
-              <h3 className="text-2xl font-bold text-slate-900">Laravel + PostgreSQL</h3>
+              <h3 className="text-2xl font-bold text-slate-900">Laravel + MySQL + PostgreSQL</h3>
             </div>
             <div className="space-y-3">
               <div className="flex items-center gap-3 bg-red-50/50 rounded-xl p-3">
@@ -323,10 +327,10 @@ function HomePage() {
                   <p className="text-sm text-slate-500">PHP Framework</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 bg-blue-50/50 rounded-xl p-3">
-                <span className="text-2xl">🐘</span>
+              <div className="flex items-center gap-3 bg-blue-50/50 rounded-xl">
+                <span className="text-2xl"><small>🐘🐬</small></span>
                 <div>
-                  <p className="font-semibold text-slate-900">PostgreSQL</p>
+                  <p className="font-semibold text-slate-900">MySQL + PostgreSQL</p>
                   <p className="text-sm text-slate-500">Advanced RDBMS</p>
                 </div>
               </div>
